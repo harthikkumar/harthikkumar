@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me my insta -> the_harthik
 - 😄 Pronouns: ...
-- ⚡ Fun fact: I am a devloper but I am not intrested doing coding in the night.
+- ⚡ Fun fact: I am a backend devloper but I am not intrested doing coding in the night.
 
 <!---
 harthikkumar/harthikkumar is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
