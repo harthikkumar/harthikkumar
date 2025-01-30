@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @harthikkumar
-- 👀 I’m interested in web dev
+- 👀 I’m interested in generative AI
 - 🌱 I’m currently learning web dev
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me my insta -> the_harthik
