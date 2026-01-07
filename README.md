@@ -59,16 +59,6 @@ I specialize in **Django**, **Python**, and API-driven architectures, with a str
 
 ---
 
-## 🚀 Projects
-
-### **Office Management System**
-🔗 [GitHub Repository](https://github.com/harthikkumar/office-management-system)
-
-### **Postgram**
-🔗 [GitHub Repository](https://github.com/harthikkumar/postgram)
-
----
-
 ## 🎯 Current Focus
 - Django & Django REST Framework  
 - GenAI integration (LLMs, RAG, automation)  
