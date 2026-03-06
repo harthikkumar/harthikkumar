@@ -2,67 +2,97 @@
    HARTHIK KUMAR — PORTFOLIO SCRIPTS
    ========================================== */
 
-// ── Custom Cursor ──────────────────────────
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+window.addEventListener('load', function () {
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX;
-  my = e.clientY;
-  cursor.style.left = mx - 6 + 'px';
-  cursor.style.top  = my - 6 + 'px';
-});
+  /* ── 1. CUSTOM CURSOR ─────────────────── */
+  var cur  = document.getElementById('cursor');
+  var ring = document.getElementById('cursorRing');
+  var mx = window.innerWidth / 2;
+  var my = window.innerHeight / 2;
+  var rx = mx, ry = my;
 
-function animateRing() {
-  rx += (mx - rx - 20) * 0.12;
-  ry += (my - ry - 20) * 0.12;
-  ring.style.left = rx + 'px';
-  ring.style.top  = ry + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'scale(2)';
-    ring.style.transform   = 'scale(1.4)';
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    cur.style.left = mx + 'px';
+    cur.style.top  = my + 'px';
   });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'scale(1)';
-    ring.style.transform   = 'scale(1)';
-  });
-});
 
-// ── Scroll Reveal ──────────────────────────
-const reveals = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
+  function tickRing() {
+    rx += (mx - rx) * 0.14;
+    ry += (my - ry) * 0.14;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(tickRing);
+  }
+  tickRing();
 
-reveals.forEach(el => revealObserver.observe(el));
-
-// ── Project Card Mouse Glow ────────────────
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width  * 100) + '%');
-    card.style.setProperty('--my', ((e.clientY - rect.top)  / rect.height * 100) + '%');
+  document.querySelectorAll('a, button').forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      cur.classList.add('hovered');
+      ring.classList.add('hovered');
+    });
+    el.addEventListener('mouseleave', function () {
+      cur.classList.remove('hovered');
+      ring.classList.remove('hovered');
+    });
   });
-});
 
-// ── Smooth Anchor Scrolling ────────────────
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+  /* ── 2. MOBILE SIDEBAR ────────────────── */
+  var menuBtn  = document.getElementById('menuBtn');
+  var sidebar  = document.getElementById('sidebar');
+  var overlay  = document.getElementById('sidebarOverlay');
+  var closeBtn = document.getElementById('closeBtn');
+
+  function openSidebar() {
+    sidebar.classList.add('show');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    menuBtn.classList.add('active');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('show');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+    menuBtn.classList.remove('active');
+  }
+
+  menuBtn.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  document.querySelectorAll('.sidebar-nav a, .sidebar-hire').forEach(function (link) {
+    link.addEventListener('click', closeSidebar);
   });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  /* ── 3. SCROLL REVEAL ─────────────────── */
+  var revealEls = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(function (el) { io.observe(el); });
+
+  /* ── 4. SMOOTH SCROLL ─────────────────── */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href');
+      if (id === '#') return;
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
 });

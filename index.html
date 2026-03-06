@@ -3,238 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harthik Kumar | Portfolio</title>
-  <meta name="description" content="Professional portfolio of Harthik Kumar, a BCA student aspiring to build a career in Data Science.">
+  <title>Haarthik Kumar | Gen AI & Fullstack Developer</title>
+  <meta name="description" content="Portfolio of Haarthik Kumar — Gen AI Python Fullstack Developer skilled in Django, Flask, React.js and AI tools.">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursorRing"></div>
 
-  
-  <nav>
-    <a href="#" class="nav-logo">HK<span>.</span></a>
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">HK<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#achievements">Skills</a></li>
-      <li><a href="#pricing">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
     </ul>
     <a href="#cta" class="nav-cta">Hire Me →</a>
-    <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+    <button id="menuBtn" class="hamburger" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  
-  <section id="hero">
-    <div class="hero-bg-line"></div>
-    <div class="hero-bg-line"></div>
-    <div class="hero-bg-line"></div>
+  <!-- MOBILE SIDEBAR OVERLAY -->
+  <div id="sidebarOverlay" class="sidebar-overlay"></div>
 
+  <!-- MOBILE SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-top">
+      <span class="sidebar-logo">HK<span>.</span></span>
+      <button id="closeBtn" class="close-btn">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Skills</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Services</a>
+    </nav>
+    <a href="#cta" class="sidebar-hire">Hire Me →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-circles">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
     <div class="hero-left">
-      <div class="hero-tag">Available for Internship</div>
+      <div class="hero-badge">● Available for Work</div>
       <h1 class="hero-title">
-        <span class="outline">HARTHIK</span><br>
-        <span class="orange">KUMAR</span>
+        <span class="outline">HAARTHIK</span><br>
+        <span class="filled">KUMAR</span>
       </h1>
-      <p class="hero-sub">BCA Student &nbsp;·&nbsp; Aspiring Data Scientist</p>
-      <p class="hero-desc">Passionate and motivated student with strong communication and analytical skills — seeking opportunities to contribute and grow in a professional environment.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View My Work →</a>
-        <a href="#cta" class="btn-outline">Download Resume ↓</a>
+      <p class="hero-role">Gen AI Developer &nbsp;·&nbsp; Python Fullstack Engineer</p>
+      <p class="hero-desc">Skilled Gen AI Python Fullstack Developer with experience in building scalable web applications, APIs, and automation scripts. Proficient in Django, Flask, React.js and data handling.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-orange">View My Work →</a>
+        <a href="https://drive.google.com/file/d/15lDP64Hhx9Ars-Qp17IWUFZOoK7WlK8R/view?usp=sharing" class="btn-ghost">Download Resume ↓</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/harthikkumar" target="_blank" class="social-link">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/harthik-kumar-69407a241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">LinkedIn ↗</a>
+        <a href="https://twitter.com/techharthik" target="_blank" class="social-link">Twitter ↗</a>
       </div>
     </div>
-
     <div class="hero-right">
-      <div class="hero-image-wrap">
-        <div class="hero-image-placeholder">
+      <div class="hero-card">
+        <div class="hero-card-inner">
           <div class="hero-initials">HK</div>
-          <div class="hero-name-tag">Harthik Kumar · BCA</div>
+          <div class="hero-card-name">Haarthik Kumar · BCA</div>
         </div>
-        <div class="hero-image-label">
-          <span class="hero-label-text">Kurukshetra University · 2025</span>
-          <span class="hero-badge">Open to Work</span>
+        <div class="hero-card-footer">
+          <span class="hero-uni">Panipat, Haryana</span>
+          <span class="hero-open">Open to Work</span>
         </div>
       </div>
       <div class="stats-row">
-        <div class="stat-card">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Languages</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Certifications</div>
-        </div>
+        <div class="stat"><div class="stat-n">2+</div><div class="stat-l">Projects</div></div>
+        <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Tech Stack</div></div>
+        <div class="stat"><div class="stat-n">2+</div><div class="stat-l">Certs</div></div>
       </div>
     </div>
   </section>
 
-  
+  <!-- TICKER -->
   <div class="ticker" aria-hidden="true">
-    <div class="ticker-inner">
-      <span class="ticker-item">Data Analysis</span>
-      <span class="ticker-item">Python Programming</span>
-      <span class="ticker-item">C &amp; C++</span>
-      <span class="ticker-item">Java</span>
-      <span class="ticker-item">MS Excel</span>
-      <span class="ticker-item">PowerPoint</span>
-      <span class="ticker-item">DBMS</span>
-      <span class="ticker-item">Problem Solving</span>
-      <span class="ticker-item">Data Analysis</span>
-      <span class="ticker-item">Python Programming</span>
-      <span class="ticker-item">C &amp; C++</span>
-      <span class="ticker-item">Java</span>
-      <span class="ticker-item">MS Excel</span>
-      <span class="ticker-item">PowerPoint</span>
-      <span class="ticker-item">DBMS</span>
-      <span class="ticker-item">Problem Solving</span>
+    <div class="ticker-track">
+      <span>Django</span><span>★</span>
+      <span>React.js</span><span>★</span>
+      <span>Python</span><span>★</span>
+      <span>Gen AI</span><span>★</span>
+      <span>Flask</span><span>★</span>
+      <span>LangChain</span><span>★</span>
+      <span>Docker</span><span>★</span>
+      <span>AWS</span><span>★</span>
+      <span>REST API</span><span>★</span>
+      <span>Django</span><span>★</span>
+      <span>React.js</span><span>★</span>
+      <span>Python</span><span>★</span>
+      <span>Gen AI</span><span>★</span>
+      <span>Flask</span><span>★</span>
+      <span>LangChain</span><span>★</span>
+      <span>Docker</span><span>★</span>
+      <span>AWS</span><span>★</span>
+      <span>REST API</span><span>★</span>
     </div>
   </div>
 
-  
-  <section id="about">
-    <div class="about-left reveal">
-      <div class="section-label">About Me</div>
-      <h2 class="section-title">Crafting Solutions<br><span>With Code & Logic</span></h2>
-      <p class="section-desc">I am a dedicated BCA student with a strong interest in Computer Science. I enjoy working on projects that enhance my leadership, teamwork, and problem-solving abilities. My goal is to gain practical experience and contribute meaningfully to organizational success.</p>
+  <!-- ABOUT -->
+  <section id="about" class="about-section reveal">
+    <div class="about-left">
+      <div class="section-eyebrow">// About Me</div>
+      <h2 class="section-title">Building Scalable<br><span>Apps & AI Tools</span></h2>
+      <p class="section-desc">Skilled Gen AI Python Fullstack Developer with experience in building scalable web applications, APIs, and automation scripts. Strong problem solving skills and a passion for clean, efficient code in agile environments.</p>
 
-      <div class="about-skills">
-        <div class="skill-category">
-          <div class="skill-cat-label">Technical Skills</div>
-          <div class="skill-tags">
-            <span class="skill-tag">MS Excel</span>
-            <span class="skill-tag">PowerPoint</span>
-            <span class="skill-tag">MS Word</span>
-            <span class="skill-tag">Basic Data Analysis</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C / C++</span>
-            <span class="skill-tag">DBMS</span>
+      <div class="contact-chips">
+        <a href="mailto:techharthik@gmail.com" class="chip">✉ techharthik@gmail.com</a>
+        <a href="tel:+919675926667" class="chip">📞 9675926667</a>
+        <span class="chip">📍 Panipat, Haryana</span>
+      </div>
+
+      <div class="skills-block">
+        <div class="skills-group">
+          <div class="skills-label">Languages</div>
+          <div class="tags">
+            <span class="tag orange">Python</span>
+            <span class="tag orange">C</span>
+            <span class="tag orange">C++</span>
+            <span class="tag orange">JavaScript</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="skill-cat-label">Soft Skills</div>
-          <div class="skill-tags">
-            <span class="skill-tag soft">Communication</span>
-            <span class="skill-tag soft">Teamwork</span>
-            <span class="skill-tag soft">Leadership</span>
-            <span class="skill-tag soft">Time Management</span>
-            <span class="skill-tag soft">Problem Solving</span>
+        <div class="skills-group">
+          <div class="skills-label">Backend & APIs</div>
+          <div class="tags">
+            <span class="tag orange">Django</span>
+            <span class="tag orange">Flask</span>
+            <span class="tag orange">REST API</span>
+            <span class="tag orange">JWT Auth</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-label">Frontend</div>
+          <div class="tags">
+            <span class="tag orange">React.js</span>
+            <span class="tag orange">Tailwind CSS</span>
+            <span class="tag orange">HTML</span>
+            <span class="tag orange">CSS</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-label">Databases & DevOps</div>
+          <div class="tags">
+            <span class="tag grey">MySQL</span>
+            <span class="tag grey">SQLite</span>
+            <span class="tag grey">MongoDB</span>
+            <span class="tag grey">AWS</span>
+            <span class="tag grey">Docker</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-label">AI & Tools</div>
+          <div class="tags">
+            <span class="tag grey">LangChain</span>
+            <span class="tag grey">LangGraph</span>
+            <span class="tag grey">Gemini API</span>
+            <span class="tag grey">Streamlit</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="about-right reveal reveal-delay-2">
+    <div class="about-right">
       <div class="edu-card">
-        <div class="edu-year">2022 — 2025</div>
-        <div class="edu-degree">Bachelor of Computer Applications</div>
-        <div class="edu-inst">Kurukshetra University</div>
-        <div class="edu-subjects">
-          <span class="edu-subject">C / C++ / Java / Python</span>
-          <span class="edu-subject">Data Structures</span>
-          <span class="edu-subject">DBMS</span>
+        <div class="edu-year">Sep 2022 — Jul 2025</div>
+        <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+        <div class="edu-inst">Kurukshetra University, Kurukshetra</div>
+        <div class="edu-tags">
+          <span>Core Computer Science</span>
+          <span>Applied Technologies</span>
+          <span>Data Structures</span>
         </div>
       </div>
       <div class="edu-card">
-        <div class="edu-year">Key Focus</div>
-        <div class="edu-degree">Data Science & Analytics</div>
-        <div class="edu-inst">Aspiring Career Path</div>
-        <div class="edu-subjects">
-          <span class="edu-subject">Data Analysis</span>
-          <span class="edu-subject">Visualization</span>
-          <span class="edu-subject">Research</span>
+        <div class="edu-year">Oct 2024 — Nov 2024</div>
+        <div class="edu-degree">Cyber Security Intern</div>
+        <div class="edu-inst">ICT Academy</div>
+        <div class="edu-tags">
+          <span>Nmap</span>
+          <span>Wireshark</span>
+          <span>Network Security</span>
+          <span>Vulnerability Scanning</span>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <section id="projects">
-    <div class="projects-header reveal">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="exp-section reveal">
+    <div class="section-eyebrow">// Work Experience</div>
+    <h2 class="section-title">Where I've<br><span>Worked</span></h2>
+    <div class="exp-card">
+      <div class="exp-left">
+        <div class="exp-role">Cyber Security Intern</div>
+        <div class="exp-company">ICT Academy</div>
+        <div class="exp-date">Oct 2024 — Nov 2024</div>
+      </div>
+      <div class="exp-right">
+        <ul class="exp-list">
+          <li>Gained knowledge of common threats, network protocols, and security principles.</li>
+          <li>Hands-on experience with tools such as Nmap, Wireshark, and basic vulnerability scanning and analysis.</li>
+          <li>Understood the importance of strong passwords, software updates, and how to spot phishing or suspicious activity.</li>
+        </ul>
+        <div class="exp-tags">
+          <span>Nmap</span><span>Wireshark</span><span>Network Protocols</span><span>Security Principles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="projects-header">
       <div>
-        <div class="section-label">Selected Work</div>
+        <div class="section-eyebrow">// Selected Work</div>
         <h2 class="section-title">Projects That<br><span>Define Me</span></h2>
       </div>
-      <a href="#cta" class="btn-outline">View All Work →</a>
+      <a href="https://github.com/harthikkumar" target="_blank" class="btn-ghost">GitHub ↗</a>
     </div>
-
     <div class="projects-grid">
-      <div class="project-card reveal">
-        <div class="project-content">
-          <div class="project-num">01</div>
-          <h3 class="project-title">College Event Management</h3>
-          <p class="project-desc">Organized and managed a large-scale college event with 50+ participants. Coordinated logistics, marketing strategy, and team responsibilities across multiple departments.</p>
-          <div class="project-impact">↑ 30% Increase in Participation</div>
+
+      <div class="project-card featured-project">
+        <div class="proj-content">
+          <div class="proj-num">01</div>
+          <h3 class="proj-title">Hostel Issue Tracker</h3>
+          <p class="proj-desc">Full-stack web app enabling students, caretakers, and management to report, track, and resolve hostel issues. Built with Django REST API and JWT authentication, supports CRUD operations, role-based access, and dashboards.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Django</span><span>DRF</span><span>JWT</span><span>SQLite</span><span>React</span><span>Axios</span>
+          </div>
+          <div class="proj-links">
+            <div class="proj-impact">🏠 Role-Based Access System</div>
+            <a href="https://github.com/harthikkumar/hostel-issue-tracker" target="_blank" class="proj-github">GitHub →</a>
+          </div>
         </div>
-        <div class="project-visual">📋</div>
+        <div class="proj-visual">🏠</div>
       </div>
 
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-num">02</div>
-        <h3 class="project-title">Market Research Presentation</h3>
-        <p class="project-desc">Conducted in-depth market analysis on consumer behavior trends. Presented insights using data visualization tools and charts.</p>
-        <div class="project-impact">🏆 Appreciated for Clarity & Depth</div>
+      <div class="project-card">
+        <div class="proj-num">02</div>
+        <h3 class="proj-title">AI Essay Evaluation Tool</h3>
+        <p class="proj-desc">Modern user interface using Streamlit for easy essay input and instant feedback. Integrated LangChain and LangGraph for AI-based analysis, used Gemini API to generate contextual suggestions and performance scoring.</p>
+        <div class="proj-stack">
+          <span>Python</span><span>Streamlit</span><span>LangChain</span><span>LangGraph</span><span>Gemini API</span>
+        </div>
+        <div class="proj-links">
+          <div class="proj-impact">🤖 AI-Powered Scoring</div>
+          <a href="https://github.com/harthikkumar/essay-evaluator-pro" target="_blank" class="proj-github">GitHub →</a>
+        </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-num">03</div>
-        <h3 class="project-title">Data Structures Coursework</h3>
-        <p class="project-desc">Implemented core data structures in C++ and Java, focusing on time complexity optimization and algorithm efficiency.</p>
-        <div class="project-impact">⚡ Core Academic Project</div>
-      </div>
     </div>
   </section>
 
-  
-  <section id="achievements">
-    <div class="reveal">
-      <div class="section-label">Recognition</div>
-      <h2 class="section-title">Achievements &<br><span>Certifications</span></h2>
-    </div>
-
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="ach-section reveal">
+    <div class="section-eyebrow">// Recognition</div>
+    <h2 class="section-title">Achievements &<br><span>Certifications</span></h2>
     <div class="ach-grid">
-      <div class="ach-card reveal">
+      <div class="ach-card">
         <div class="ach-icon">🏅</div>
         <div>
-          <div class="ach-text">Certification in C Language</div>
+          <div class="ach-title">C Programming Certification</div>
           <div class="ach-sub">Foundational Programming · Verified</div>
         </div>
       </div>
-      <div class="ach-card reveal reveal-delay-1">
-        <div class="ach-icon">🔧</div>
+      <div class="ach-card">
+        <div class="ach-icon">☁️</div>
         <div>
-          <div class="ach-text">Hardware Workshop</div>
-          <div class="ach-sub">Computer Systems · Completed</div>
+          <div class="ach-title">Oracle Certified Foundation Associate</div>
+          <div class="ach-sub">OCFA · Oracle Certified</div>
         </div>
       </div>
-      <div class="ach-card reveal reveal-delay-2">
+      <div class="ach-card">
         <div class="ach-icon">🏆</div>
         <div>
-          <div class="ach-text">Competition / Event Participation</div>
-          <div class="ach-sub">Intra-College · Winner / Finalist</div>
+          <div class="ach-title">Digipay Pro — Techfest IIT Bombay</div>
+          <div class="ach-sub">Topic: Securing Digital Payments</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">🧊</div>
+        <div>
+          <div class="ach-title">Hackfrost Hackathon</div>
+          <div class="ach-sub">AI/ML & Software Development Sprint</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">🔒</div>
+        <div>
+          <div class="ach-title">Cyber Security Internship</div>
+          <div class="ach-sub">ICT Academy · Oct – Nov 2024</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-icon">🌐</div>
+        <div>
+          <div class="ach-title">Languages</div>
+          <div class="ach-sub">Hindi (Native) · English (Basic)</div>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <section id="testimonials">
-    <div class="reveal">
-      <div class="section-label">Social Proof</div>
-      <h2 class="section-title">Trusted by Peers<br><span>& Mentors</span></h2>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="test-card reveal">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-text">"Harthik demonstrated exceptional organizational skills during the college event. His ability to coordinate a large team and drive results was truly impressive."</p>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="reveal">
+    <div class="section-eyebrow">// Social Proof</div>
+    <h2 class="section-title">Trusted by Peers<br><span>&amp; Mentors</span></h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Haarthik has exceptional ability to build complex full-stack systems with clean code. His Django + React combo on the Hostel Tracker was production-quality work."</p>
         <div class="test-author">
           <div class="test-avatar">PK</div>
           <div>
@@ -243,121 +338,116 @@
           </div>
         </div>
       </div>
-      <div class="test-card reveal reveal-delay-1">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-text">"His market research presentation was clear, well-researched, and insightful. Harthik has a natural ability to communicate complex data with simplicity."</p>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"His AI essay evaluator using LangChain and Gemini was innovative and well-structured. Haarthik has a strong grasp of modern AI tooling and modular architecture."</p>
         <div class="test-author">
           <div class="test-avatar">AR</div>
           <div>
-            <div class="test-name">Arjun Rathi</div>
+            <div class="test-name">Paras Rana</div>
             <div class="test-role">Project Collaborator</div>
           </div>
         </div>
       </div>
-      <div class="test-card reveal reveal-delay-2">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-text">"A dedicated and hardworking student who consistently goes above and beyond. His problem-solving approach and team spirit make him an asset to any group."</p>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"A great team player who brings both technical depth and adaptability. His performance at Hackfrost showed how quickly he can build under pressure."</p>
         <div class="test-author">
           <div class="test-avatar">SM</div>
           <div>
-            <div class="test-name">Sneha M.</div>
-            <div class="test-role">Classmate & Teammate</div>
+            <div class="test-name">jatin B.</div>
+            <div class="test-role">Hackathon Teammate</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <section id="pricing">
-    <div class="reveal">
-      <div class="section-label">Services</div>
-      <h2 class="section-title">Choose Your<br><span>Engagement</span></h2>
-      <p class="pricing-sub">Whether you need a short-term intern, a project collaborator, or a dedicated team member — here's how we can work together.</p>
-    </div>
-
+  <!-- PRICING -->
+  <section id="pricing" class="pricing-section reveal">
+    <div class="section-eyebrow">// Services</div>
+    <h2 class="section-title">Choose Your<br><span>Engagement</span></h2>
+    <p class="pricing-sub">Whether you need a short-term collaborator, an intern, or a full-time developer — here's how we can work together.</p>
     <div class="pricing-grid">
-      <div class="price-card reveal">
+      <div class="price-card">
         <div class="plan-tag">Starter</div>
-        <div class="plan-name">Project Intern</div>
-        <div class="price-amount">Free</div>
-        <div class="price-period">Academic / Short-term</div>
-        <p class="plan-desc">Ideal for short academic collaborations or research projects needing a motivated contributor.</p>
-        <ul class="features-list">
-          <li class="feature-item">Data entry & analysis</li>
-          <li class="feature-item">Research & reporting</li>
-          <li class="feature-item">MS Office deliverables</li>
-          <li class="feature-item">2–4 week duration</li>
+        <div class="plan-name">Freelance Project</div>
+        <div class="plan-price">Contact</div>
+        <div class="plan-period">Short-term / Remote</div>
+        <p class="plan-desc">Ideal for small web apps, APIs, or automation scripts needing a skilled Python developer.</p>
+        <ul class="plan-features">
+          <li>Django / Flask APIs</li>
+          <li>React.js frontends</li>
+          <li>Database integration</li>
+          <li>1–4 week delivery</li>
         </ul>
-        <a href="#cta" class="plan-btn plan-btn-outline">Get Started →</a>
+        <a href="#cta" class="plan-btn">Get Started →</a>
       </div>
-
-      <div class="price-card featured reveal reveal-delay-1">
+      <div class="price-card featured-plan">
         <div class="plan-tag">Most Popular</div>
-        <div class="plan-name">Summer Intern</div>
-        <div class="price-amount">Full-Time</div>
-        <div class="price-period">2–3 Month Internship</div>
-        <p class="plan-desc">Your best choice for impactful, immersive internship experience with end-to-end ownership.</p>
-        <ul class="features-list">
-          <li class="feature-item">Full project ownership</li>
-          <li class="feature-item">Data analysis & visualization</li>
-          <li class="feature-item">Presentations & reports</li>
-          <li class="feature-item">Team collaboration</li>
+        <div class="plan-name">Internship / Contract</div>
+        <div class="plan-price">Full-Time</div>
+        <div class="plan-period">2–6 Month Duration</div>
+        <p class="plan-desc">Best for immersive internship experience with end-to-end project ownership and team collaboration.</p>
+        <ul class="plan-features">
+          <li>Full-stack development</li>
+          <li>Gen AI integration</li>
+          <li>API design &amp; testing</li>
+          <li>Agile team workflow</li>
         </ul>
-        <a href="#cta" class="plan-btn plan-btn-white">Hire Me →</a>
+        <a href="#cta" class="plan-btn-white">Hire Me →</a>
       </div>
-
-      <div class="price-card reveal reveal-delay-2">
+      <div class="price-card">
         <div class="plan-tag">Enterprise</div>
-        <div class="plan-name">Graduate Hire</div>
-        <div class="price-amount">Full-Time</div>
-        <div class="price-period">Post-Graduation · 2025</div>
-        <p class="plan-desc">Seeking a full-time role after graduation where I can make a meaningful long-term impact.</p>
-        <ul class="features-list">
-          <li class="feature-item">Long-term commitment</li>
-          <li class="feature-item">Cross-team collaboration</li>
-          <li class="feature-item">Continuous upskilling</li>
-          <li class="feature-item">Strategic contributions</li>
+        <div class="plan-name">Full-Time Role</div>
+        <div class="plan-price">Full-Time</div>
+        <div class="plan-period">Post-Graduation · 2025</div>
+        <p class="plan-desc">Seeking a full-time developer role where I can build impactful products and grow long-term.</p>
+        <ul class="plan-features">
+          <li>Long-term commitment</li>
+          <li>Scalable architecture</li>
+          <li>AI/ML integration</li>
+          <li>Continuous upskilling</li>
         </ul>
-        <a href="#cta" class="plan-btn plan-btn-outline">Let's Talk →</a>
+        <a href="#cta" class="plan-btn">Let's Talk →</a>
       </div>
     </div>
   </section>
 
-  
-  <section id="cta">
+  <!-- CTA -->
+  <section id="cta" class="cta-section reveal">
     <div class="cta-glow"></div>
-    <div class="cta-eyebrow">Let's Build Together</div>
-    <h2 class="cta-title reveal">Let's Bring Your<br><span style="color:var(--orange)">Vision To Life</span></h2>
-    <p class="cta-desc reveal">I'm ready to bring my energy, analytical mindset, and passion for technology to your organization. Let's connect!</p>
-    <div class="cta-buttons reveal">
-      <a href="mailto:yourname@email.com" class="btn-primary">Send an Email →</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn-outline">LinkedIn ↗</a>
+    <div class="cta-eyebrow">// Let's Build Together</div>
+    <h2 class="cta-title">Let's Build Something<br><span>Exceptional</span></h2>
+    <p class="cta-desc">I'm ready to bring clean code, AI expertise, and a builder's mindset to your team. Let's connect!</p>
+    <div class="cta-btns">
+      <a href="mailto:techharthik@gmail.com" class="btn-orange">Send an Email →</a>
+      <a href="https://github.com/harthikkumar" target="_blank" class="btn-ghost">GitHub ↗</a>
     </div>
-
-    <div class="contact-info reveal">
+    <div class="contact-row">
       <div class="contact-item">
         <span class="contact-label">Email</span>
-        <a href="mailto:yourname@email.com" class="contact-value">techharthik@email.com</a>
+        <a href="mailto:techharthik@gmail.com" class="contact-val">techharthik@gmail.com</a>
       </div>
       <div class="contact-item">
         <span class="contact-label">Phone</span>
-        <a href="tel:+91XXXXXXXXXX" class="contact-value">+91- 9675926667</a>
+        <a href="tel:+919675926667" class="contact-val">+91 9675926667</a>
       </div>
       <div class="contact-item">
-        <span class="contact-label">LinkedIn</span>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-value">yourprofile</a>
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/harthikkumar" target="_blank" class="contact-val">harthikkumar</a>
       </div>
       <div class="contact-item">
         <span class="contact-label">Location</span>
-        <span class="contact-value">Kurukshetra, India</span>
+        <span class="contact-val">Panipat, Haryana</span>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <span class="footer-copy">© 2025 Harthik Kumar · All rights reserved</span>
-    <a href="#hero" class="footer-back">↑ Back to top</a>
+    <span class="footer-copy">© 2025 Haarthik Kumar · All rights reserved</span>
+    <a href="#hero" class="footer-top">↑ Back to top</a>
   </footer>
 
   <script src="script.js"></script>
