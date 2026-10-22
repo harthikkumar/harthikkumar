@@ -1,5 +1,5 @@
 /* ==========================================
-   HARTHIK KUMAR — PORTFOLIO SCRIPTS
+   HAARTHIK KUMAR — PORTFOLIO SCRIPTS
    ========================================== */
 
 window.addEventListener('load', function () {
